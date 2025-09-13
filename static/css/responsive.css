@@ -1,0 +1,435 @@
+/* Responsive CSS for AgroSmart - Mobile Compatibility */
+
+/* General Responsive Styles */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 992px) {
+  /* Header */
+  header .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  header .logo {
+    margin-bottom: 10px;
+  }
+  
+  header .nav-right {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  header nav ul li {
+    margin: 5px;
+  }
+  
+  /* User Menu */
+  .user-menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  /* Dashboard Section Contents */
+  section .content {
+    flex-direction: column !important;
+  }
+  
+  section .content .text,
+  section .content .image {
+    width: 100%;
+  }
+  
+  section .content .image > img {
+    height: auto;
+    max-height: 300px;
+  }
+  
+  /* About Section */
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-text,
+  .about-image {
+    width: 100%;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  
+  /* Features */
+  .features-container {
+    gap: 20px;
+  }
+  
+  .feature-box {
+    width: calc(50% - 20px);
+  }
+  
+  /* Contact Details */
+  .contact-details {
+    gap: 20px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Header */
+  header nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 5px;
+  }
+  
+  header nav::-webkit-scrollbar {
+    height: 3px;
+  }
+  
+  header nav::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 10px;
+  }
+  
+  header nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  header nav ul li a {
+    padding: 8px 12px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  /* Home Section */
+  #home .intro {
+    padding: 30px;
+    margin: 0 15px;
+  }
+  
+  #home .intro h1 {
+    font-size: 32px;
+  }
+  
+  #home .intro p {
+    font-size: 16px;
+  }
+  
+  #home .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+  
+  /* Feature Boxes */
+  .feature-box {
+    width: 100%;
+  }
+  
+  /* Section Styles */
+  .crop-cards {
+    padding: 25px 15px;
+    margin-bottom: 30px;
+  }
+  
+  section .content {
+    gap: 30px;
+  }
+  
+  section .content .text h2 {
+    font-size: 26px;
+  }
+  
+  section .content .text p {
+    font-size: 15px;
+  }
+  
+  section .content .text .btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  
+  /* Banner and Carousel */
+  .hero-banner {
+    margin-bottom: 30px;
+  }
+  
+  .carousel img {
+    height: 250px;
+  }
+  
+  .carousel .carousel-caption {
+    padding: 15px;
+    max-width: 85%;
+    bottom: 20px;
+  }
+  
+  .carousel .carousel-caption h5 {
+    font-size: 20px;
+  }
+  
+  .carousel .carousel-caption p {
+    font-size: 14px;
+  }
+  
+  /* Contact Items */
+  .contact-item {
+    width: 100%;
+  }
+  
+  /* Form Responsiveness */
+  .form-container,
+  .input-container,
+  .form-group {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .form-card {
+    padding: 20px;
+    margin: 20px auto;
+    width: 95%;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .form-row .form-group {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  input[type="submit"],
+  button[type="submit"],
+  .submit-btn {
+    width: 100%;
+  }
+  
+  .result-section {
+    padding: 15px;
+  }
+  
+  .result-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 24px;
+  }
+  
+  .user-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  #home .intro h1 {
+    font-size: 28px;
+  }
+  
+  .features-section h2,
+  .about-section h2,
+  .contact-section h2 {
+    font-size: 28px;
+  }
+  
+  /* Form elements for input pages */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  /* Form containers */
+  .form-container {
+    padding: 20px 15px;
+  }
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  #home {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Weather App Responsive Styles */
+@media (max-width: 768px) {
+  .weather-container {
+    padding: 15px;
+  }
+  
+  .search-container {
+    flex-direction: column;
+  }
+  
+  .search-container input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .forecast-section {
+    overflow-x: auto;
+  }
+  
+  .forecast-cards {
+    width: max-content;
+  }
+}
+
+/* Profile Page Responsive Styles */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 15px;
+    flex-direction: column;
+  }
+  
+  .profile-sidebar,
+  .profile-content {
+    width: 100%;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Login/Signup Page Responsive Styles */
+@media (max-width: 992px) {
+  .container#container {
+    width: 90%;
+    max-width: 800px;
+    flex-direction: row;
+    height: auto;
+    min-height: 600px;
+  }
+  
+  .left, .right {
+    width: 50%;
+  }
+  
+  .flash-messages {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container#container {
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  .left {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .right {
+    width: 100%;
+  }
+  
+  .form-container {
+    padding: 20px;
+  }
+  
+  .form-container h1 {
+    font-size: 24px;
+  }
+  
+  .form-container .subtitle {
+    font-size: 14px;
+  }
+  
+  .flash-messages {
+    width: 90%;
+    right: 5%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container#container {
+    width: 95%;
+    margin: 10px auto;
+  }
+  
+  .left {
+    height: 150px;
+  }
+  
+  .overlay .quote {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .form-container {
+    padding: 15px;
+  }
+  
+  .form-container h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .form-container .subtitle {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  input[type="email"],
+  input[type="text"],
+  input[type="password"] {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .login, .signup {
+    font-size: 12px;
+  }
+  
+  #google_translate_element {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+  }
+  
+  #google_translate_element select {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+} 
